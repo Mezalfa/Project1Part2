@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VintageVision | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Vintage Vision</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="signin.html">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero d-flex align-items-center justify-content-center text-center text-light">
+    <div>
+      <h1>Discover the Era Behind Your Style</h1>
+      <p>Upload your photo and let AI reveal your fashion story.</p>
+      <button class="btn btn-light mt-3" onclick="scrollToUpload()">Try It Now</button>
+    </div>
+  </header>
+
+  <!-- Upload Section -->
+  <section class="container my-5" id="upload">
+    <h2 class="text-center mb-4">Analyze Your Outfit</h2>
+    <div class="text-center">
+      <input type="file" id="photoUpload" class="form-control w-50 mx-auto">
+      <button class="btn btn-dark mt-3" onclick="showResult()">Analyze</button>
+    </div>
+
+    <div id="resultBox" class="mt-4 text-center d-none">
+      <h4>Result:</h4>
+      <p id="resultText">Your outfit resembles 1970s Bohemian Chic style!</p>
+      <img src="images/boho.jpg" class="result-img mt-2">
+    </div>
+  </section>
+
+  <footer class="text-center py-4 bg-dark text-light">
+    © 2025 Vintage Vision. All Rights Reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
