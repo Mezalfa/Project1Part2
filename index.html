@@ -82,6 +82,16 @@
     function showResult() {
         document.getElementById("resultBox").classList.remove("d-none");
     }
+    (function () {
+        const nav = document.querySelector('.navbar.fixed-top');
+        const setHeights = () => {
+            if (!nav) return;
+            const h = nav.offsetHeight + 'px';
+            document.documentElement.style.setProperty('--nav-h', h);
+        };
+        setHeights();
+        window.addEventListener('resize', setHeights);
+    })();
 </script>
 </body>
 </html>
