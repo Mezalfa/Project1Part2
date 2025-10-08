@@ -1,4 +1,4 @@
-<!--:root { --nav-h: 56px; }-->
+:root { --nav-h: 56px; }
 
 body {
     display: flex;
@@ -43,34 +43,4 @@ body {
 
 .result-img { width: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
 
-/* Floating badge */
-.float-badge {
-    float: right;                     
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: #212529;
-    color: #fff;
-    font-size: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
-    margin: 8px 0 0 8px;
-}
-@media (max-width: 768px) {
-    .float-badge {
-        float: none;
-        position: fixed;                   
-        right: 16px; bottom: 16px;
-        z-index: 1050;
-    }
-}
-
-/* Cards, illustrations, strength bar */
-.card-elev { border: 1px solid rgba(0,0,0,.08); box-shadow: 0 8px 24px rgba(0,0,0,.06); border-radius: 14px; }
-.side-illustration { max-width: 480px; width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-
-.strength-bar { height: 6px; border-radius: 4px; background: #e9ecef; overflow: hidden; }
-.strength-fill { height: 100%; width: 0%; transition: width .2s ease; }
-.strength-weak   { background: #dc3545; }  
-.strength-fair   { background: #fd7e14; }  
-.strength-good   { background: #ffc107; }  
-.strength-strong { background: #28a745; }  
 
