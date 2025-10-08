@@ -3,9 +3,9 @@ body { padding-top: var(--nav-h); margin: 0; }
 .hero {
     background-image: url('images/mondrian.jpg');
     background-repeat: no-repeat;
-    background-size: cover;          /* scale to fill container */
-    background-position: center top; /* focus on the top center of the image */
-    min-height: 100vh;               /* ensure it takes full viewport height */
+    background-size: cover;         
+    background-position: center top; 
+    min-height: 100vh;               
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,11 +13,11 @@ body { padding-top: var(--nav-h); margin: 0; }
     color: #fff;
 }
 
-/* Adjust for mobile screens */
+
 @media (max-width: 768px) {
     .hero {
-        background-position: center top;  /* keeps top-center visible */
-        min-height: 70vh;                 /* reduce height for small screens */
+        background-position: center center;  
+        min-height: 70vh;              
     }
 }
 
