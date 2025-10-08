@@ -46,7 +46,7 @@
     <div id="resultBox" class="mt-4 text-center d-none">
         <h4>Result:</h4>
         <p id="resultText">Your outfit resembles 1970s Bohemian Chic style!</p>
-        <img src="images/boho.jpg" class="result-img mt-2" alt="Result" />
+        <!-- <img src="images/boho.jpg" class="result-img mt-2" alt="Result" /> -->
     </div>
 </section>
 
@@ -66,6 +66,7 @@
 
  
 document.getElementById('analyzeBtn').addEventListener('click', showResult {
+    document.getElementById('resultBox').classList.remove('d-none');
     showResult();
     const input = document.getElementById('photoUpload');
     if (input.files.length > 0) {
