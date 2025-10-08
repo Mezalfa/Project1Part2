@@ -9,13 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
     <style>
-        /* --- 必要的页面样式（每页都有 CSS） --- */
+       
         html, body { height: 100%; }
         body { display: flex; flex-direction: column; }
 
-        /* 右侧浮动徽章：桌面端 float:right；移动端固定在右下角 */
+        
         .float-badge {
-            float: right;                         /* 满足“浮动到右侧”的要求 */
+            float: right;                     
             padding: 8px 12px;
             border-radius: 999px;
             background: #212529;
@@ -27,20 +27,20 @@
         @media (max-width: 768px) {
             .float-badge {
                 float: none;
-                position: fixed;                    /* 小屏放右下角，等价“浮到底部”视觉 */
+                position: fixed;                   
                 right: 16px; bottom: 16px;
                 z-index: 1050;
             }
         }
 
-        /* 登录卡片与创建账户卡片的分栏、阴影与间距 */
+        
         .card-elev {
             border: 1px solid rgba(0,0,0,.08);
             box-shadow: 0 8px 24px rgba(0,0,0,.06);
             border-radius: 14px;
         }
 
-        /* 密码强度条 */
+
         .strength-bar { height: 6px; border-radius: 4px; background: #e9ecef; overflow: hidden; }
         .strength-fill { height: 100%; width: 0%; transition: width .2s ease; }
         .strength-weak   { background: #dc3545; }  /* red */
@@ -48,10 +48,10 @@
         .strength-good   { background: #ffc107; }  /* yellow */
         .strength-strong { background: #28a745; }  /* green */
 
-        /* 顶部导航与主体间距（fixed-top） */
+     
         body { padding-top: 56px; }
 
-        /* 登录页的配图（满足每页“图片/图形”要求） */
+        
         .side-illustration {
             max-width: 480px;
             width: 100%;
@@ -61,7 +61,7 @@
     </style>
 </head>
 <body>
-<div id="app"></div> <!-- 只放空 div，全部由 React 渲染 -->
+<div id="app"></div> 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -70,7 +70,7 @@
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-<!-- React App -->
+
 <script type="text/babel">
     const { useState, useMemo } = React;
 
