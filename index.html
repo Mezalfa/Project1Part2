@@ -64,6 +64,18 @@
         }
     });
 
+ 
+document.getElementById('analyzeBtn').addEventListener('click', function() {
+    showResult();
+    const input = document.getElementById('photoUpload');
+    if (input.files.length > 0) {
+        document.getElementById('resultText').textContent = 
+            `You uploaded: ${input.files[0].name}`;
+    }
+});
+
+
+
     function scrollToUpload() {
         const uploadSection = document.getElementById("upload");
         if (uploadSection) {
