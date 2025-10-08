@@ -5,7 +5,7 @@ body { padding-top: var(--nav-h); margin: 0; }
     background-repeat: no-repeat;
     background-size: contain;        
     background-position: center center; 
-    background-color: #f5f5f5; /* Light gray or white to complement Mondrian */
+    background-color: #f5f5f5; 
     min-height: 100vh;               
     display: flex;
     align-items: center;
@@ -15,12 +15,12 @@ body { padding-top: var(--nav-h); margin: 0; }
 }
 
 
-/* Hero background for mobile */
+
 @media (max-width: 768px) {
     .hero {
-        background-size: contain;   /* scale image to fit entirely */
-        background-position: center top; /* keep focus on top */
-        min-height: 70vh;           /* same as before */
+        background-size: contain;   
+        background-position: center top; 
+        min-height: 70vh;           
     }
 }
 
