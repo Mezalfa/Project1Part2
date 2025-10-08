@@ -64,15 +64,24 @@
     });
 
  
-document.getElementById('analyzeBtn').addEventListener('click', showResult {
-    document.getElementById('resultBox').classList.remove('d-none');
-    showResult();
-    const input = document.getElementById('photoUpload');
+function showResult() {
+    const resultBox = document.getElementById("resultBox");
+    const input = document.getElementById("photoUpload");
+    const resultText = document.getElementById("resultText");
+
+   
     if (input.files.length > 0) {
-        document.getElementById('resultText').textContent = 
-            `You uploaded: ${input.files[0].name}`;
+        resultText.textContent = `You uploaded: ${input.files[0].name}`;
+    } else {
+        resultText.textContent = "Your outfit resembles 1970s Bohemian Chic style!";
     }
-});
+
+  
+    resultBox.classList.remove("d-none");
+}
+
+
+document.getElementById("analyzeBtn").addEventListener("click", showResult);
 
 
 
