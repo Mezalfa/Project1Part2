@@ -14,12 +14,15 @@ body { padding-top: var(--nav-h); margin: 0; }
 }
 
 
+/* Hero background for mobile */
 @media (max-width: 768px) {
     .hero {
-        background-position: center center;  
-        min-height: 70vh;              
+        background-size: contain;   /* scale image to fit entirely */
+        background-position: center top; /* keep focus on top */
+        min-height: 70vh;           /* same as before */
     }
 }
+
 
 
 #upload .text-center {
