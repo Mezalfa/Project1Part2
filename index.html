@@ -35,7 +35,6 @@
     </div>
 </header>
 
-
 <section class="container my-5" id="upload">
     <h2 class="text-center mb-4">Analyze Your Outfit</h2>
     <div class="text-center">
@@ -92,20 +91,24 @@ document.getElementById('analyzeBtn').addEventListener('click', showResult {
         }
     }
 
-    function showResult() {
-        document.getElementById("resultBox").classList.remove("d-none");
-    }
-    (function () {
-        const nav = document.querySelector('.navbar.fixed-top');
-        const setHeights = () => {
-            if (!nav) return;
-            const h = nav.offsetHeight + 'px';
-            document.documentElement.style.setProperty('--nav-h', h);
-        };
-        setHeights();
-        window.addEventListener('resize', setHeights);
+   function showResult() {
+        const resultBox = document.getElementById("resultBox");
+        const input = document.getElementById("photoUpload");
+        const resultText = document.getElementById("resultText");
 
-    })();
+        // Update text if a file is uploaded
+        if (input.files.length > 0) {
+            resultText.textContent = `You uploaded: ${input.files[0].name}`;
+        } else {
+            resultText.textContent = "Your outfit resembles 1970s Bohemian Chic style!";
+        }
+
+        // Show the result box
+        resultBox.classList.remove("d-none");
+    }
+
+    // Attach click event to Analyze button
+    document.getElementById("analyzeBtn").addEventListener("click", showResult);
 </script>
 </body>
 </html>
