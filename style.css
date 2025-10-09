@@ -68,10 +68,10 @@ body {
 .strength-strong { background: #28a745; } /* green */
 
 .side-illustration {
-    max-width: 480px;
-    width: 100%;
+
+    width: 1000%;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    
 }
 
 #photoUpload {
