@@ -43,16 +43,6 @@ body {
     gap: 12px;
 }
 
-.float-badge {
-    float: right;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: #212529;
-    color: #fff;
-    font-size: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin: 8px 0 0 8px;
-}
 
 @media (max-width: 768px) {
     .float-badge {
