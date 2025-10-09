@@ -105,18 +105,18 @@ document.getElementById("analyzeBtn").addEventListener("click", showResult);
         const input = document.getElementById("photoUpload");
         const resultText = document.getElementById("resultText");
 
-        // Update text if a file is uploaded
+       
         if (input.files.length > 0) {
             resultText.textContent = `You uploaded: ${input.files[0].name}`;
         } else {
             resultText.textContent = "Your outfit resembles 1970s Bohemian Chic style!";
         }
 
-        // Show the result box
+  
         resultBox.classList.remove("d-none");
     }
 
-    // Attach click event to Analyze button
+    
     document.getElementById("analyzeBtn").addEventListener("click", showResult);
 </script>
 </body>
