@@ -44,16 +44,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .float-badge {
-        float: none;
-        position: fixed;
-        right: 16px;
-        bottom: 16px;
-        z-index: 1050;
-    }
-}
-
 .card-elev {
     border: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
