@@ -1,9 +1,9 @@
-// Smooth scroll to upload section
+
 function scrollToUpload() {
   document.getElementById("upload").scrollIntoView({ behavior: "smooth" });
 }
 
-// Show fake analysis result
+
 function showResult() {
   const resultBox = document.getElementById("resultBox");
   resultBox.classList.remove("d-none");
@@ -11,15 +11,13 @@ function showResult() {
     "Your outfit resembles 1970s Bohemian Chic style!";
 }
 
-// Contact form interaction
+
 function showThankYou(event) {
   event.preventDefault();
   document.querySelector("form").classList.add("d-none");
   document.getElementById("thankYou").classList.remove("d-none");
 }
-// =============== 交互 #1：Bootstrap 导航折叠/展开（已满足，无需额外代码） ===============
-// 只要引入 bootstrap.bundle.min.js，并使用 navbar-expand-lg + data-bs-target，就OK。
-// 这里额外做个“滚动加阴影”，老师会很喜欢细节：
+
 (function () {
     const nav = document.querySelector('.navbar');
     if (!nav) return;
