@@ -68,8 +68,8 @@ body {
 .strength-strong { background: #28a745; } /* green */
 
 .side-illustration {
-
-    width: 1000%;
+    max-width: 480px;
+    width: 100%;
     border-radius: 12px;
     
 }
@@ -84,8 +84,4 @@ body {
     align-self: center;
 }
 
-.result-img {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
+
