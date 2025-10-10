@@ -25,7 +25,7 @@ body {
 
 @media (max-width: 768px) {
     .hero {
-        background-position: center center;
+        background-position: center top;
         min-height: 70vh;
     }
 }
