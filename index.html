@@ -100,24 +100,11 @@ document.getElementById("analyzeBtn").addEventListener("click", showResult);
         }
     }
 
-   function showResult() {
-        const resultBox = document.getElementById("resultBox");
-        const input = document.getElementById("photoUpload");
-        const resultText = document.getElementById("resultText");
-
-       
-        if (input.files.length > 0) {
-            resultText.textContent = `You uploaded: ${input.files[0].name}`;
-        } else {
-            resultText.textContent = "Your outfit resembles 1970s Bohemian Chic style!";
-        }
-
-  
-        resultBox.classList.remove("d-none");
-    }
+   
+    
 
     
-    document.getElementById("analyzeBtn").addEventListener("click", showResult);
+    
 </script>
 </body>
 </html>
