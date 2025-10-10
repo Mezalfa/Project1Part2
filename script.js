@@ -79,32 +79,4 @@ function showThankYou(event) {
     }
 
 
-    window.scrollToUpload = function () {
-        document.getElementById('upload')?.scrollIntoView({ behavior: 'smooth' });
-    };
-
-
-    window.showResult = function () {
-        if (analyzeBtn.disabled) return;
-        resultBox?.classList.remove('d-none');
-    };
-})();
-
-
-window.showThankYou = function (e) {
-    e.preventDefault();
-    const thanks = document.getElementById('thankYou');
-    thanks?.classList.remove('d-none');
-    e.target?.reset();
-    return false;
-};
-
-
-(function () {
-    const nav = document.querySelector('.navbar.fixed-top');
-    if (!nav) return;
-    const setPad = () => document.body.style.paddingTop = nav.offsetHeight + 'px';
-    window.addEventListener('load', setPad);
-    window.addEventListener('resize', setPad);
-})();
 
