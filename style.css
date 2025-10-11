@@ -8,7 +8,10 @@ body {
     min-height: 100vh;
     padding-top: var(--nav-h);
 }
-
+.contact-img {
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
 .hero {
     background-image: url('images/mondrian.jpg');
     background-repeat: no-repeat;
