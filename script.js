@@ -31,10 +31,9 @@ function showResult() {
 
   if (!uploadInput || !analyzeBtn) return;
 
-  // Disable analyze button until file chosen
   analyzeBtn.disabled = !uploadInput.files || uploadInput.files.length === 0;
 
-  // When file selected, enable analyze and show file name
+  
   uploadInput.addEventListener('change', () => {
     analyzeBtn.disabled = !(uploadInput.files && uploadInput.files[0]);
 
@@ -50,7 +49,7 @@ function showResult() {
       : '';
   });
 
-  // Drag and drop styling + functionality
+  
   const inputWrap = uploadInput.closest('.text-center') || uploadSection;
   if (inputWrap) {
     ['dragenter', 'dragover'].forEach(ev =>
