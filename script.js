@@ -1,42 +1,31 @@
 
 function scrollToUpload() {
-    document.getElementById("upload")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("upload").scrollIntoView({ behavior: "smooth" });
 }
 
 
 function showResult() {
     const resultBox = document.getElementById("resultBox");
-    const input = document.getElementById("photoUpload");
     const resultText = document.getElementById("resultText");
     
-    if (input && input.files.length > 0) {
-        resultText.textContent = `You uploaded: ${input.files[0].name}`;
-    } else {
-        resultText.textContent = "Your outfit resembles 1970s Bohemian Chic style!";
-    }
-    
-    resultBox?.classList.remove("d-none");
+    resultBox.classList.remove("d-none");
+    resultText.textContent = "Your outfit resembles 1970s Bohemian Chic style!";
 }
-
 
 function showThankYou(event) {
     event.preventDefault();
-    const form = document.querySelector("form");
-    const thankYou = document.getElementById("thankYou");
-    form?.classList.add("d-none");
-    thankYou?.classList.remove("d-none");
+    document.querySelector("form").classList.add("d-none");
+    document.getElementById("thankYou").classList.remove("d-none");
 }
+
 
 (function () {
     const nav = document.querySelector('.navbar');
     if (!nav) return;
     
     const shadowOnScroll = () => {
-        if (window.scrollY > 4) {
-            nav.classList.add('shadow-sm');
-        } else {
-            nav.classList.remove('shadow-sm');
-        }
+        if (window.scrollY > 4) nav.classList.add('shadow-sm');
+        else nav.classList.remove('shadow-sm');
     };
     
     shadowOnScroll();
@@ -47,15 +36,18 @@ function showThankYou(event) {
 (function () {
     const uploadInput = document.getElementById('photoUpload');
     const analyzeBtn = document.getElementById('analyzeBtn');
+    const resultBox = document.getElementById('resultBox');
+    const uploadSection = document.getElementById('upload');
     
     if (!uploadInput || !analyzeBtn) return;
     
-    analyzeBtn.disabled = true;
+    
+    analyzeBtn.disabled = !uploadInput.files || uploadInput.files.length === 0;
+    
     
     uploadInput.addEventListener('change', () => {
-        analyzeBtn.disabled = !uploadInput.files || uploadInput.files.length === 0;
+        analyzeBtn.disabled = !(uploadInput.files && uploadInput.files[0]);
         
-    
         let info = document.getElementById('fileInfoInline');
         if (!info) {
             info = document.createElement('div');
@@ -66,7 +58,37 @@ function showThankYou(event) {
         info.textContent = uploadInput.files[0] ? `Selected: ${uploadInput.files[0].name}` : '';
     });
     
+
+    const inputWrap = uploadInput.closest('.text-center') || uploadSection;
+    if (inputWrap) {
+        ['dragenter', 'dragover'].forEach(ev =>
+            inputWrap.addEventListener(ev, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadInput.classList.add('is-valid');
+            })
+        );
+        
+        ['dragleave', 'dragend', 'drop'].forEach(ev =>
+            inputWrap.addEventListener(ev, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadInput.classList.remove('is-valid');
+            })
+        );
+        
+        inputWrap.addEventListener('drop', (e) => {
+            const file = e.dataTransfer?.files?.[0];
+            if (file) {
+                const dt = new DataTransfer();
+                dt.items.add(file);
+                uploadInput.files = dt.files;
+                uploadInput.dispatchEvent(new Event('change'));
+            }
+        });
+    }
     
+  
     analyzeBtn.addEventListener('click', showResult);
 })();
 
@@ -82,6 +104,4 @@ function showThankYou(event) {
     window.addEventListener('load', setPadding);
     window.addEventListener('resize', setPadding);
 })();
-
-
 
